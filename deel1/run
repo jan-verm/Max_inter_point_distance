@@ -1,0 +1,5 @@
+gcc -std=c99 -lm ./*.c
+
+# maxdist <vertices> <file> <iterations> <population_size> <max_mutation_step> <num_crossovers> <mutation_prob>
+./a.out 5 ../vierhoek.txt
+

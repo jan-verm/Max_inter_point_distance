@@ -1,0 +1,8 @@
+gcc -std=c99 -lm ./*.c
+
+# maxdist <vertices> <file> <iterations> <population_size> <max_mutation_step> <num_crossovers> <mutation_prob>
+./a.out 5 ../vierhoek.txt > output_1_2
+
+cat output_1_2 | grep best | sed 's/best fitness://g' > output_1_2_best
+cat output_1_2 | grep average | sed 's/average fitness://g' > output_1_2_average
+rm output_1_2

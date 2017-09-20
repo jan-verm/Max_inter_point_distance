@@ -1,0 +1,4 @@
+#!/bin/bash
+
+scp *.c *.h helios:~/DA3/ >/dev/null
+ssh helios 'cd DA3/; mpicc -std=c99 *.c -lm; mpirun -n $1 a.out 5 vierhoek.txt $2 $3 $4 $5 $6 $7'
